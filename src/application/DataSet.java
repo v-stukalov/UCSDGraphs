@@ -1,11 +1,11 @@
 package application;
 
+import geography.GeographicPoint;
+import util.GraphLoader;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
-
-import geography.GeographicPoint;
-import util.GraphLoader;
 
 /**
  * Class to wrap the graph, current .map file map, and 
@@ -43,7 +43,7 @@ public class DataSet {
      * @return The set of road intersections (vertices in the graph)
      */
     public Set<GeographicPoint> getIntersections() {
-    	Set<GeographicPoint> intersectionsFromGraph = graph.getVertices();
+    	Set<GeographicPoint> intersectionsFromGraph = (Set<GeographicPoint>) graph.getVertices();
     	if (intersectionsFromGraph == null) {
     		return intersections;
     	}
